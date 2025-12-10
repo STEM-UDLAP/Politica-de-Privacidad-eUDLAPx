@@ -153,11 +153,11 @@
             header h1 {
                 font-size: 1.8em;
             }
-            
+
             h2 {
                 font-size: 1.5em;
             }
-            
+
             .container {
                 padding: 15px;
             }
@@ -173,20 +173,23 @@
 
         <p class="last-updated">Última actualización: Diciembre 2025</p>
 
+        <!-- INTRODUCCIÓN -->
         <div class="section">
             <h2>Introducción</h2>
             <p>
                 Este documento describe cómo la aplicación móvil <strong>eUDLAPx</strong> recopila, procesa y protege 
                 los datos personales de sus usuarios, con especial énfasis en el uso de tecnologías biométricas 
-                para autenticación y seguridad.
+                para autenticación y seguridad en dispositivos iOS y Android.
             </p>
             <p>
                 eUDLAPx es una aplicación desarrollada para la Fundación Universidad de las Américas, Puebla (UDLAP). 
-                El tratamiento de datos personales se realiza en cumplimiento del <a href="https://www.udlap.mx/privacidad/" 
-                target="_blank">Aviso de Privacidad Institucional de UDLAP</a> y la legislación mexicana aplicable.
+                El tratamiento de datos personales se realiza en cumplimiento del 
+                <a href="https://www.udlap.mx/privacidad/" target="_blank">Aviso de Privacidad Institucional de UDLAP</a> 
+                y la legislación mexicana aplicable.
             </p>
         </div>
 
+        <!-- RESPONSABLE -->
         <div class="section">
             <h2>Responsable del Tratamiento de Datos</h2>
             <p>
@@ -199,298 +202,271 @@
             </p>
         </div>
 
+        <!-- BIOMETRÍA iOS (TRUEDEPTH) -->
         <div class="section">
-            <h2>Uso de TrueDepth API y Detección de Vida (Liveness)</h2>
+            <h2>Tecnologías Biométricas en iOS: TrueDepth API</h2>
             
             <div class="highlight-box">
                 <h3>¿Qué es TrueDepth API?</h3>
                 <p>
-                    eUDLAPx utiliza la tecnología <strong>TrueDepth API</strong> de Apple para realizar detección 
-                    de vida (liveness) durante la autenticación de usuarios. Esta tecnología verifica que una 
-                    persona física real está presente durante el proceso de autenticación.
+                    En dispositivos iOS, eUDLAPx utiliza la tecnología <strong>TrueDepth API</strong> de Apple 
+                    para realizar detección de vida (liveness). Esta tecnología verifica que una persona física 
+                    real está presente durante el proceso de autenticación.
                 </p>
             </div>
 
             <h3>Datos Recopilados con TrueDepth</h3>
-            <p>Durante el proceso de autenticación, la aplicación recopila los siguientes datos mediante TrueDepth API:</p>
+            <p>Durante el proceso de autenticación, la aplicación recopila:</p>
             <ul>
-                <li>Patrones de movimiento facial (giros de cabeza, asentimientos)</li>
-                <li>Detección de parpadeo de ojos</li>
-                <li>Mediciones de distancia desde la cámara</li>
-                <li>Orientación de la cabeza (ángulos Yaw, Pitch, Roll)</li>
+                <li>Patrones de movimiento facial</li>
+                <li>Parpadeos</li>
+                <li>Mediciones de distancia</li>
+                <li>Orientación de cabeza (Yaw, Pitch, Roll)</li>
             </ul>
 
-            <h3>Finalidad del Uso de TrueDepth</h3>
-            <p>Los datos de TrueDepth se utilizan exclusivamente para:</p>
+            <h3>Finalidad</h3>
+            <p>Los datos se utilizan exclusivamente para:</p>
             <ul>
-                <li>Verificar que una persona física real está presente (no una fotografía, video pregrabado o máscara)</li>
-                <li>Prevenir acceso no autorizado al campus universitario mediante suplantación de identidad</li>
-                <li>Cumplir con los protocolos de seguridad institucionales</li>
-                <li>Proteger la seguridad de la comunidad universitaria</li>
+                <li>Detectar vida (liveness)</li>
+                <li>Prevenir suplantación de identidad</li>
+                <li>Proteger el acceso al campus</li>
             </ul>
 
-            <h3>Consentimiento del Usuario para TrueDepth</h3>
+            <h3>Consentimiento</h3>
             <p>
-                El uso de TrueDepth API requiere su consentimiento explícito. Al utilizar eUDLAPx, usted:
-            </p>
-            <ul>
-                <li>Acepta el uso de TrueDepth API durante el proceso de autenticación</li>
-                <li>Otorga permiso a iOS para que la aplicación acceda a la cámara TrueDepth de su dispositivo</li>
-                <li>Confirma que ha leído y comprende esta política de privacidad</li>
-                <li>Entiende que los datos de TrueDepth se procesan únicamente en su dispositivo</li>
-            </ul>
-            <p>
-                <strong>Sin su consentimiento para el uso de TrueDepth, no podrá utilizar eUDLAPx para acceso al campus.</strong> 
-                En tal caso, deberá utilizar los métodos alternativos de identificación proporcionados por la universidad.
+                El uso de TrueDepth requiere consentimiento explícito. Si no es otorgado, no podrá usarse eUDLAPx 
+                para acceso al campus.
             </p>
 
             <div class="info-box">
                 <h3>Proceso de Detección de Vida</h3>
                 <p><strong>Liveness Activo (en dispositivo):</strong></p>
                 <ol>
-                    <li>TrueDepth API procesa datos faciales completamente en el dispositivo del usuario</li>
-                    <li>Se verifica movimiento ocular, parpadeo y orientación de cabeza en tiempo real</li>
-                    <li>Se genera un resultado booleano (persona real: sí/no)</li>
-                    <li>Los datos biométricos crudos se descartan inmediatamente</li>
+                    <li>Procesamiento completamente local</li>
+                    <li>Verificación en tiempo real</li>
+                    <li>Resultado booleano</li>
+                    <li>Datos crudos descartados inmediatamente</li>
                 </ol>
+
                 <p><strong>Liveness Pasivo (en servidor):</strong></p>
                 <ol>
-                    <li>Se envía un vector de características faciales (representación matemática) al servidor</li>
-                    <li>Un modelo de aprendizaje automático analiza el vector para detección de vida pasiva</li>
-                    <li>NO se transmiten ni almacenan imágenes faciales</li>
-                    <li>El vector se descarta después de la verificación</li>
+                    <li>Envío de vector matemático no reconstructible</li>
+                    <li>Análisis por modelo de ML</li>
+                    <li>No se envían imágenes</li>
+                    <li>Vector eliminado tras la verificación</li>
                 </ol>
             </div>
         </div>
 
+        <!-- BIOMETRÍA ANDROID (ML KIT) -->
+        <div class="section">
+            <h2>Tecnologías Biométricas en Android: Google ML Kit</h2>
+
+            <div class="highlight-box">
+                <h3>¿Qué es Google ML Kit?</h3>
+                <p>
+                    En dispositivos Android, eUDLAPx utiliza <strong>ML Kit Vision</strong> de Google para detección 
+                    de vida (liveness). Esta tecnología emplea algoritmos de visión computacional para detectar 
+                    presencia humana y descartar intentos de fraude.
+                </p>
+            </div>
+
+            <h3>Datos Procesados con ML Kit</h3>
+            <p>
+                ML Kit procesa temporalmente, sin almacenar:
+            </p>
+            <ul>
+                <li>Movimientos faciales básicos</li>
+                <li>Parpadeos y presencia de rostro</li>
+                <li>Orientación general del rostro</li>
+                <li>Características matemáticas generadas por ML Kit</li>
+            </ul>
+
+            <p><strong>No se generan mapas de profundidad ni se almacenan imágenes o videos.</strong></p>
+
+            <h3>Finalidad</h3>
+            <ul>
+                <li>Verificar presencia real (liveness)</li>
+                <li>Evitar suplantación con fotos o videos</li>
+                <li>Proteger el acceso al campus</li>
+            </ul>
+
+            <h3>Consentimiento</h3>
+            <p>
+                Se requiere otorgar permiso de cámara en Android. Sin este permiso no podrá autenticarse mediante eUDLAPx.
+            </p>
+
+            <div class="info-box">
+                <h3>Proceso de Liveness con ML Kit</h3>
+                <p><strong>Liveness en dispositivo (Android):</strong></p>
+                <ol>
+                    <li>ML Kit analiza imágenes en memoria temporal</li>
+                    <li>No se capturan ni almacenan fotografías</li>
+                    <li>Se produce un resultado booleano</li>
+                    <li>Los datos se descartan en milisegundos</li>
+                </ol>
+
+                <p><strong>Liveness Pasivo (servidor):</strong></p>
+                <ol>
+                    <li>Generación de vector matemático no reconstructible</li>
+                    <li>Envío temporal al servidor</li>
+                    <li>Análisis por modelo de ML</li>
+                    <li>Eliminación tras la verificación</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- PROCESAMIENTO Y ALMACENAMIENTO -->
         <div class="section">
             <h2>Procesamiento y Almacenamiento de Datos</h2>
             
-            <h3>Procesamiento en Dispositivo</h3>
+            <h3>Procesamiento en Dispositivo (iOS y Android)</h3>
             <p>
-                <strong>TODOS</strong> los datos de TrueDepth se procesan íntegramente en su dispositivo en tiempo real. 
-                Una vez completada la verificación de vida, los datos biométricos crudos se descartan inmediatamente. 
-                La aplicación <strong>NUNCA</strong> almacena datos biométricos sin procesar.
+                <strong>TODOS</strong> los datos biométricos procesados por TrueDepth (iOS) y ML Kit (Android) 
+                se ejecutan localmente en su dispositivo. Ninguna imagen facial, mapa de profundidad ni video 
+                almacenado se guarda o transmite.
+            </p>
+            <p>
+                En Android, las imágenes analizadas por ML Kit se mantienen únicamente en memoria temporal 
+                y se descartan automáticamente en milisegundos.
             </p>
 
             <h3>Información Transmitida a Servidores UDLAP</h3>
             <p>La aplicación transmite únicamente:</p>
             <ul>
-                <li><strong>Resultado de verificación de vida</strong> (booleano: verificado sí/no)</li>
-                <li><strong>Vector de características faciales</strong> (representación matemática, NO imágenes)</li>
-                <li><strong>Marca de tiempo</strong> del intento de autenticación</li>
-                <li><strong>ID de usuario</strong> asociado al intento</li>
+                <li>Resultado booleano de verificación de vida</li>
+                <li>Vector matemático no reconstructible (si aplica)</li>
+                <li>Marca de tiempo</li>
+                <li>ID de usuario</li>
             </ul>
 
-            <h3>Información Almacenada en Servidores</h3>
-            <p>Los servidores de UDLAP almacenan únicamente:</p>
+            <h3>Información Almacenada</h3>
             <ul>
-                <li>Resultado de la autenticación (exitosa/fallida)</li>
-                <li>Marca de tiempo del intento</li>
-                <li>Identificador de usuario</li>
-                <li>Registro de auditoría de acceso al campus</li>
+                <li>Resultado de autenticación</li>
+                <li>Marca de tiempo</li>
+                <li>ID de usuario</li>
+                <li>Registros de auditoría</li>
             </ul>
 
             <div class="highlight-box">
                 <h3>Información que NUNCA se Almacena ni Comparte</h3>
                 <ul>
-                    <li>Mapas de profundidad facial o modelos 3D</li>
+                    <li>Mapas de profundidad o modelos 3D</li>
                     <li>Datos crudos del sensor TrueDepth</li>
                     <li>Imágenes o fotografías faciales</li>
-                    <li>Coordenadas de seguimiento ocular</li>
-                    <li>Datos de posición de cabeza sin procesar</li>
-                    <li>Plantillas biométricas reconstruibles</li>
+                    <li>Videos capturados por la cámara</li>
+                    <li>Datos biométricos procesables o reconstruibles</li>
                 </ul>
             </div>
         </div>
 
+        <!-- TERCEROS -->
         <div class="section">
             <h2>Compartir con Terceros</h2>
             <p>
-                <strong>NO</strong> se comparten datos de TrueDepth ni información biométrica con terceros. 
-                Todo el procesamiento biométrico ocurre localmente en su dispositivo o en servidores seguros 
-                de UDLAP. Solo resultados booleanos de verificación (verificado/no verificado) se registran 
-                en sistemas institucionales.
+                <strong>NO</strong> se comparten datos biométricos con terceros. Todo procesamiento se realiza 
+                localmente en el dispositivo o en servidores institucionales de UDLAP.
             </p>
         </div>
 
+        <!-- OTROS DATOS -->
         <div class="section">
             <h2>Otros Datos Personales Recopilados</h2>
-            <p>Además de la información relacionada con TrueDepth, eUDLAPx recopila:</p>
-            <ul>
-                <li><strong>Datos de autenticación:</strong> Credenciales institucionales (validadas mediante Microsoft MSAL)</li>
-                <li><strong>Datos de acceso:</strong> Registros de entrada y salida del campus, códigos QR escaneados, ubicación de puntos de acceso</li>
-                <li><strong>Datos de dispositivo:</strong> Identificador del dispositivo, modelo, versión de iOS, token de notificaciones push (Firebase FCM)</li>
-                <li><strong>Datos de perfil:</strong> Nombre, matrícula/ID institucional, rol (estudiante/empleado), fotografía de perfil institucional</li>
-            </ul>
             <p>
-                Estos datos se utilizan exclusivamente para proporcionar funcionalidades de seguridad y acceso al campus.
+                Además de los datos biométricos descritos, eUDLAPx recopila:
             </p>
+            <ul>
+                <li><strong>Datos de autenticación:</strong> MSAL (Microsoft)</li>
+                <li><strong>Registros de acceso al campus</strong></li>
+                <li><strong>Datos de dispositivo:</strong> modelo, OS, token FCM</li>
+                <li><strong>Datos de perfil:</strong> nombre, ID, rol</li>
+            </ul>
         </div>
 
+        <!-- RETENCIÓN -->
         <div class="section">
             <h2>Retención de Datos</h2>
             
             <div class="highlight-box">
-                <h3>Retención Específica de Datos TrueDepth</h3>
-                <p>
-                    <strong>Datos biométricos de TrueDepth: CERO días de retención</strong>
-                </p>
-                <ul>
-                    <li>Procesados en tiempo real en su dispositivo (procesamiento en milisegundos)</li>
-                    <li>Descartados inmediatamente tras completar la verificación de vida</li>
-                    <li>Nunca almacenados en memoria persistente del dispositivo</li>
-                    <li>Nunca transmitidos fuera de su dispositivo</li>
-                    <li>No existe copia, respaldo ni archivo de datos biométricos crudos</li>
-                </ul>
+                <h3>Datos TrueDepth (iOS)</h3>
+                <p><strong>Retención: 0 días (eliminación inmediata)</strong></p>
             </div>
 
-            <h3>Otros Datos Relacionados con Autenticación</h3>
-            <p>
-                <strong>Resultados de verificación de vida (boolean): 2 años desde último acceso</strong>
-            </p>
-            <ul>
-                <li>Solo se almacena el resultado de autenticación (verificado: sí/no)</li>
-                <li>Sin información biométrica reconstruible</li>
-                <li>Utilizados exclusivamente para auditoría de seguridad del campus</li>
-            </ul>
+            <div class="highlight-box">
+                <h3>Datos ML Kit (Android)</h3>
+                <p><strong>Retención: 0 días (procesamiento temporal en memoria)</strong></p>
+            </div>
 
-            <p>
-                <strong>Vectores de características faciales: Retención temporal (segundos)</strong>
-            </p>
-            <ul>
-                <li>Enviados al servidor para liveness pasivo</li>
-                <li>Procesados inmediatamente por modelo de ML</li>
-                <li>Eliminados automáticamente tras completar verificación</li>
-                <li>No son imágenes ni datos reconstruibles</li>
-            </ul>
+            <h3>Otros Datos de Autenticación</h3>
+            <p><strong>Resultados booleanos:</strong> 2 años desde último acceso</p>
 
-            <p>
-                <strong>Registros de acceso al campus: 5 años</strong>
-            </p>
-            <ul>
-                <li>Marca de tiempo de entrada/salida</li>
-                <li>Punto de acceso utilizado</li>
-                <li>ID de usuario asociado</li>
-                <li>Requeridos por políticas de auditoría y seguridad institucional</li>
-            </ul>
+            <h3>Vectores Matemáticos</h3>
+            <p><strong>Retención:</strong> segundos (eliminación automática)</p>
 
-            <p>
-                <strong>Token de notificaciones (Firebase FCM): Hasta desinstalación o revocación</strong>
-            </p>
-            <ul>
-                <li>Almacenado mientras la aplicación esté instalada</li>
-                <li>Eliminado automáticamente al desinstalar la app</li>
-                <li>Usado únicamente para envío de notificaciones de seguridad</li>
-            </ul>
+            <h3>Registros de Acceso</h3>
+            <p><strong>Retención:</strong> 5 años</p>
         </div>
 
+        <!-- SEGURIDAD -->
         <div class="section">
             <h2>Medidas de Seguridad</h2>
-            <p>
-                UDLAP implementa medidas de seguridad técnicas, físicas y administrativas para proteger sus datos personales:
-            </p>
             <ul>
-                <li><strong>Encriptación:</strong> Todas las comunicaciones entre la aplicación y servidores utilizan HTTPS/TLS</li>
-                <li><strong>Almacenamiento seguro:</strong> Tokens de autenticación almacenados en Keychain de iOS</li>
-                <li><strong>Control de acceso:</strong> Acceso limitado a datos personales solo para personal autorizado</li>
-                <li><strong>Auditorías:</strong> Revisión periódica de medidas de seguridad y cumplimiento</li>
-                <li><strong>Secure Enclave:</strong> Datos biométricos procesados en enclave seguro del dispositivo</li>
+                <li><strong>Cifrado TLS/HTTPS</strong></li>
+                <li><strong>Keychain (iOS) y Encrypted Shared Preferences (Android)</strong></li>
+                <li><strong>Secure Enclave</strong> en dispositivos compatibles</li>
+                <li>Auditorías regulares</li>
             </ul>
         </div>
 
+        <!-- ARCO -->
         <div class="section">
-            <h2>Derechos ARCO (Acceso, Rectificación, Cancelación y Oposición)</h2>
+            <h2>Derechos ARCO</h2>
             <p>
-                Como titular de datos personales, usted tiene derecho a:
-            </p>
-            <ul>
-                <li><strong>Acceder</strong> a sus datos personales en posesión de UDLAP</li>
-                <li><strong>Rectificar</strong> datos inexactos o incompletos</li>
-                <li><strong>Cancelar</strong> sus datos cuando considere que no se requieren para finalidad alguna</li>
-                <li><strong>Oponerse</strong> al tratamiento de sus datos para fines específicos</li>
-            </ul>
-            <p>
-                Para ejercer sus derechos ARCO y conocer los procedimientos aplicables, consulte el 
-                <a href="https://www.udlap.mx/privacidad/" target="_blank">Aviso de Privacidad Institucional de UDLAP</a>, 
-                donde se detallan los mecanismos, requisitos y plazos para el ejercicio de estos derechos.
+                Acceso, rectificación, cancelación u oposición pueden solicitarse siguiendo el Aviso de Privacidad institucional.
             </p>
         </div>
 
+        <!-- REVOCACIÓN -->
         <div class="section">
             <h2>Revocación del Consentimiento</h2>
-            
-            <h3>Cómo Revocar su Consentimiento para el Uso de TrueDepth</h3>
-            <p>Puede revocar su consentimiento para el uso de TrueDepth API en cualquier momento mediante las siguientes opciones:</p>
 
             <div class="info-box">
-                <h4>Opción 1: Desactivar Permiso de Cámara en iOS</h4>
+                <h4>En iOS</h4>
                 <ol>
-                    <li>Abra la aplicación <strong>Configuración</strong> en su iPhone o iPad</li>
-                    <li>Desplácese hacia abajo y busque <strong>"eUDLAPx"</strong></li>
-                    <li>Toque en la aplicación eUDLAPx</li>
-                    <li>Desactive el permiso de <strong>"Cámara"</strong></li>
+                    <li>Configuración > eUDLAPx > Cámara</li>
+                    <li>Desactivar acceso a cámara (TrueDepth)</li>
                 </ol>
-                <p>
-                    <strong>Resultado:</strong> La aplicación ya no podrá acceder a TrueDepth API. No podrá autenticarse 
-                    mediante eUDLAPx y deberá usar métodos alternativos de acceso al campus.
-                </p>
             </div>
 
             <div class="info-box">
-                <h4>Opción 2: Desinstalar la Aplicación</h4>
-                <ul>
-                    <li>Mantenga presionado el ícono de eUDLAPx en su pantalla de inicio</li>
-                    <li>Seleccione "Eliminar app" o "Desinstalar"</li>
-                    <li>Confirme la desinstalación</li>
-                </ul>
-                <p>
-                    <strong>Resultado:</strong> Al desinstalar eUDLAPx, se revoca automáticamente todo acceso a TrueDepth 
-                    y se eliminan todos los permisos otorgados a la aplicación. Los datos almacenados localmente en su 
-                    dispositivo se eliminan permanentemente.
-                </p>
+                <h4>En Android</h4>
+                <ol>
+                    <li>Ajustes > Aplicaciones > eUDLAPx</li>
+                    <li>Permisos > Cámara > Denegar</li>
+                </ol>
             </div>
 
-            <h3>Efecto de la Revocación</h3>
-            <p>Cuando revoca el consentimiento para el uso de TrueDepth:</p>
-            <ul>
-                <li>La aplicación ya no podrá acceder a la cámara TrueDepth de su dispositivo</li>
-                <li>No podrá realizar autenticación biométrica en eUDLAPx</li>
-                <li>No podrá utilizar eUDLAPx para acceso al campus</li>
-                <li>Deberá utilizar métodos alternativos de identificación proporcionados por la universidad</li>
-                <li>Los registros históricos de acceso al campus se conservarán según políticas de auditoría institucional</li>
-            </ul>
-
-            <h3>Revocación para Otros Datos Personales</h3>
-            <p>
-                Para revocar el consentimiento del tratamiento de otros datos personales o solicitar la eliminación 
-                completa de su cuenta y datos asociados, consulte el 
-                <a href="https://www.udlap.mx/privacidad/" target="_blank">Aviso de Privacidad Institucional de UDLAP</a>, 
-                donde se detallan los mecanismos y procedimientos aplicables.
-            </p>
+            <div class="info-box">
+                <h4>Desinstalar la Aplicación</h4>
+                <p>Elimina permisos y datos locales automáticamente.</p>
+            </div>
         </div>
 
+        <!-- ACTUALIZACIONES -->
         <div class="section">
             <h2>Actualizaciones de Información</h2>
             <p>
-                Esta información puede ser actualizada periódicamente para reflejar cambios en las prácticas de 
-                manejo de datos de la aplicación eUDLAPx o en la legislación aplicable.
-            </p>
-            <p>
-                Las actualizaciones se publicarán en esta página. Cuando sean cambios sustanciales, se notificarán 
-                mediante la aplicación eUDLAPx. Recomendamos revisar periódicamente esta información.
+                Esta información puede actualizarse periódicamente y los cambios serán notificados en la aplicación.
             </p>
         </div>
 
+        <!-- JURISDICCIÓN -->
         <div class="section">
             <h2>Jurisdicción y Legislación Aplicable</h2>
-            <p>
-                El presente Aviso de Privacidad se rige por la legislación mexicana, específicamente:
-            </p>
             <ul>
                 <li>Ley Federal de Protección de Datos Personales en Posesión de los Particulares</li>
-                <li>Reglamento de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares</li>
-                <li>Lineamientos del Aviso de Privacidad emitidos por el INAI</li>
+                <li>Reglamento de la Ley</li>
+                <li>Lineamientos del INAI</li>
             </ul>
         </div>
 
