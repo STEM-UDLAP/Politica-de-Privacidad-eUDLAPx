@@ -65,12 +65,24 @@
             margin-bottom: 15px;
         }
 
+        h4 {
+            color: #154734;
+            font-size: 1.1em;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
         p {
             margin-bottom: 15px;
             text-align: justify;
         }
 
         ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        ol {
             margin-left: 20px;
             margin-bottom: 15px;
         }
@@ -217,6 +229,21 @@
                 <li>Proteger la seguridad de la comunidad universitaria</li>
             </ul>
 
+            <h3>Consentimiento del Usuario para TrueDepth</h3>
+            <p>
+                El uso de TrueDepth API requiere su consentimiento explícito. Al utilizar eUDLAPx, usted:
+            </p>
+            <ul>
+                <li>Acepta el uso de TrueDepth API durante el proceso de autenticación</li>
+                <li>Otorga permiso a iOS para que la aplicación acceda a la cámara TrueDepth de su dispositivo</li>
+                <li>Confirma que ha leído y comprende esta política de privacidad</li>
+                <li>Entiende que los datos de TrueDepth se procesan únicamente en su dispositivo</li>
+            </ul>
+            <p>
+                <strong>Sin su consentimiento para el uso de TrueDepth, no podrá utilizar eUDLAPx para acceso al campus.</strong> 
+                En tal caso, deberá utilizar los métodos alternativos de identificación proporcionados por la universidad.
+            </p>
+
             <div class="info-box">
                 <h3>Proceso de Detección de Vida</h3>
                 <p><strong>Liveness Activo (en dispositivo):</strong></p>
@@ -303,16 +330,59 @@
 
         <div class="section">
             <h2>Retención de Datos</h2>
+            
+            <div class="highlight-box">
+                <h3>Retención Específica de Datos TrueDepth</h3>
+                <p>
+                    <strong>Datos biométricos de TrueDepth: CERO días de retención</strong>
+                </p>
+                <ul>
+                    <li>Procesados en tiempo real en su dispositivo (procesamiento en milisegundos)</li>
+                    <li>Descartados inmediatamente tras completar la verificación de vida</li>
+                    <li>Nunca almacenados en memoria persistente del dispositivo</li>
+                    <li>Nunca transmitidos fuera de su dispositivo</li>
+                    <li>No existe copia, respaldo ni archivo de datos biométricos crudos</li>
+                </ul>
+            </div>
+
+            <h3>Otros Datos Relacionados con Autenticación</h3>
             <p>
-                Los resultados de verificación de vida y registros de acceso se conservan durante el tiempo necesario 
-                para cumplir con protocolos de seguridad y auditoría institucionales, en cumplimiento con la 
-                <strong>Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)</strong>.
+                <strong>Resultados de verificación de vida (boolean): 2 años desde último acceso</strong>
             </p>
+            <ul>
+                <li>Solo se almacena el resultado de autenticación (verificado: sí/no)</li>
+                <li>Sin información biométrica reconstruible</li>
+                <li>Utilizados exclusivamente para auditoría de seguridad del campus</li>
+            </ul>
+
             <p>
-                Los plazos de conservación no excederán lo necesario para el cumplimiento de las finalidades descritas. 
-                Una vez cumplidas, y cuando no exista disposición legal que establezca lo contrario, UDLAP procederá 
-                a la cancelación de sus datos personales.
+                <strong>Vectores de características faciales: Retención temporal (segundos)</strong>
             </p>
+            <ul>
+                <li>Enviados al servidor para liveness pasivo</li>
+                <li>Procesados inmediatamente por modelo de ML</li>
+                <li>Eliminados automáticamente tras completar verificación</li>
+                <li>No son imágenes ni datos reconstruibles</li>
+            </ul>
+
+            <p>
+                <strong>Registros de acceso al campus: 5 años</strong>
+            </p>
+            <ul>
+                <li>Marca de tiempo de entrada/salida</li>
+                <li>Punto de acceso utilizado</li>
+                <li>ID de usuario asociado</li>
+                <li>Requeridos por políticas de auditoría y seguridad institucional</li>
+            </ul>
+
+            <p>
+                <strong>Token de notificaciones (Firebase FCM): Hasta desinstalación o revocación</strong>
+            </p>
+            <ul>
+                <li>Almacenado mientras la aplicación esté instalada</li>
+                <li>Eliminado automáticamente al desinstalar la app</li>
+                <li>Usado únicamente para envío de notificaciones de seguridad</li>
+            </ul>
         </div>
 
         <div class="section">
@@ -349,19 +419,55 @@
 
         <div class="section">
             <h2>Revocación del Consentimiento</h2>
-            <p>
-                Puede revocar su consentimiento para el tratamiento de sus datos personales. Para conocer el 
-                procedimiento aplicable, consulte el <a href="https://www.udlap.mx/privacidad/" target="_blank">Aviso 
-                de Privacidad Institucional de UDLAP</a>.
-            </p>
+            
+            <h3>Cómo Revocar su Consentimiento para el Uso de TrueDepth</h3>
+            <p>Puede revocar su consentimiento para el uso de TrueDepth API en cualquier momento mediante las siguientes opciones:</p>
+
             <div class="info-box">
+                <h4>Opción 1: Desactivar Permiso de Cámara en iOS</h4>
+                <ol>
+                    <li>Abra la aplicación <strong>Configuración</strong> en su iPhone o iPad</li>
+                    <li>Desplácese hacia abajo y busque <strong>"eUDLAPx"</strong></li>
+                    <li>Toque en la aplicación eUDLAPx</li>
+                    <li>Desactive el permiso de <strong>"Cámara"</strong></li>
+                </ol>
                 <p>
-                    <strong>Nota Importante:</strong> El uso de TrueDepth API es requerido para la funcionalidad de 
-                    seguridad de eUDLAPx. Si revoca su consentimiento para el procesamiento de datos biométricos, 
-                    no podrá utilizar la aplicación para acceso al campus y deberá utilizar métodos alternativos 
-                    de identificación proporcionados por la universidad.
+                    <strong>Resultado:</strong> La aplicación ya no podrá acceder a TrueDepth API. No podrá autenticarse 
+                    mediante eUDLAPx y deberá usar métodos alternativos de acceso al campus.
                 </p>
             </div>
+
+            <div class="info-box">
+                <h4>Opción 2: Desinstalar la Aplicación</h4>
+                <ul>
+                    <li>Mantenga presionado el ícono de eUDLAPx en su pantalla de inicio</li>
+                    <li>Seleccione "Eliminar app" o "Desinstalar"</li>
+                    <li>Confirme la desinstalación</li>
+                </ul>
+                <p>
+                    <strong>Resultado:</strong> Al desinstalar eUDLAPx, se revoca automáticamente todo acceso a TrueDepth 
+                    y se eliminan todos los permisos otorgados a la aplicación. Los datos almacenados localmente en su 
+                    dispositivo se eliminan permanentemente.
+                </p>
+            </div>
+
+            <h3>Efecto de la Revocación</h3>
+            <p>Cuando revoca el consentimiento para el uso de TrueDepth:</p>
+            <ul>
+                <li>La aplicación ya no podrá acceder a la cámara TrueDepth de su dispositivo</li>
+                <li>No podrá realizar autenticación biométrica en eUDLAPx</li>
+                <li>No podrá utilizar eUDLAPx para acceso al campus</li>
+                <li>Deberá utilizar métodos alternativos de identificación proporcionados por la universidad</li>
+                <li>Los registros históricos de acceso al campus se conservarán según políticas de auditoría institucional</li>
+            </ul>
+
+            <h3>Revocación para Otros Datos Personales</h3>
+            <p>
+                Para revocar el consentimiento del tratamiento de otros datos personales o solicitar la eliminación 
+                completa de su cuenta y datos asociados, consulte el 
+                <a href="https://www.udlap.mx/privacidad/" target="_blank">Aviso de Privacidad Institucional de UDLAP</a>, 
+                donde se detallan los mecanismos y procedimientos aplicables.
+            </p>
         </div>
 
         <div class="section">
