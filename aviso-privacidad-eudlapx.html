@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Información sobre cómo eUDLAPx recopila y protege datos personales - Universidad de las Américas Puebla">
+    <title>Información de Privacidad - eUDLAPx</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        header {
+            background: linear-gradient(135deg, #e35205 0%, #154734 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin: -20px -20px 40px -20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #e35205;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #154734;
+        }
+
+        h3 {
+            color: #154734;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background-color: #fff5f0;
+            border-left: 4px solid #e35205;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .info-box {
+            background-color: #f0f7f4;
+            border-left: 4px solid #154734;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .contact-info {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .contact-info h3 {
+            color: #e35205;
+            margin-top: 0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #666;
+            font-size: 0.9em;
+            border-top: 1px solid #ddd;
+            margin-top: 50px;
+        }
+
+        a {
+            color: #e35205;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        strong {
+            color: #154734;
+        }
+
+        .last-updated {
+            text-align: right;
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>eUDLAPx</h1>
+            <p>Información de Privacidad de la Aplicación</p>
+        </header>
+
+        <p class="last-updated">Última actualización: Diciembre 2025</p>
+
+        <div class="section">
+            <h2>Introducción</h2>
+            <p>
+                Este documento describe cómo la aplicación móvil <strong>eUDLAPx</strong> recopila, procesa y protege 
+                los datos personales de sus usuarios, con especial énfasis en el uso de tecnologías biométricas 
+                para autenticación y seguridad.
+            </p>
+            <p>
+                eUDLAPx es una aplicación desarrollada para la Fundación Universidad de las Américas, Puebla (UDLAP). 
+                El tratamiento de datos personales se realiza en cumplimiento del <a href="https://www.udlap.mx/privacidad/" 
+                target="_blank">Aviso de Privacidad Institucional de UDLAP</a> y la legislación mexicana aplicable.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Responsable del Tratamiento de Datos</h2>
+            <p>
+                <strong>Fundación Universidad de las Américas, Puebla (UDLAP)</strong><br>
+                Domicilio: Ex Hacienda Santa Catarina Mártir S/N, San Andrés Cholula, Puebla, C.P. 72810, México
+            </p>
+            <p>
+                Para consultas sobre el manejo de datos personales por parte de UDLAP, consulte el 
+                <a href="https://www.udlap.mx/privacidad/" target="_blank">Aviso de Privacidad Institucional</a>.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Uso de TrueDepth API y Detección de Vida (Liveness)</h2>
+            
+            <div class="highlight-box">
+                <h3>¿Qué es TrueDepth API?</h3>
+                <p>
+                    eUDLAPx utiliza la tecnología <strong>TrueDepth API</strong> de Apple para realizar detección 
+                    de vida (liveness) durante la autenticación de usuarios. Esta tecnología verifica que una 
+                    persona física real está presente durante el proceso de autenticación.
+                </p>
+            </div>
+
+            <h3>Datos Recopilados con TrueDepth</h3>
+            <p>Durante el proceso de autenticación, la aplicación recopila los siguientes datos mediante TrueDepth API:</p>
+            <ul>
+                <li>Patrones de movimiento facial (giros de cabeza, asentimientos)</li>
+                <li>Detección de parpadeo de ojos</li>
+                <li>Mediciones de distancia desde la cámara</li>
+                <li>Orientación de la cabeza (ángulos Yaw, Pitch, Roll)</li>
+            </ul>
+
+            <h3>Finalidad del Uso de TrueDepth</h3>
+            <p>Los datos de TrueDepth se utilizan exclusivamente para:</p>
+            <ul>
+                <li>Verificar que una persona física real está presente (no una fotografía, video pregrabado o máscara)</li>
+                <li>Prevenir acceso no autorizado al campus universitario mediante suplantación de identidad</li>
+                <li>Cumplir con los protocolos de seguridad institucionales</li>
+                <li>Proteger la seguridad de la comunidad universitaria</li>
+            </ul>
+
+            <div class="info-box">
+                <h3>Proceso de Detección de Vida</h3>
+                <p><strong>Liveness Activo (en dispositivo):</strong></p>
+                <ol>
+                    <li>TrueDepth API procesa datos faciales completamente en el dispositivo del usuario</li>
+                    <li>Se verifica movimiento ocular, parpadeo y orientación de cabeza en tiempo real</li>
+                    <li>Se genera un resultado booleano (persona real: sí/no)</li>
+                    <li>Los datos biométricos crudos se descartan inmediatamente</li>
+                </ol>
+                <p><strong>Liveness Pasivo (en servidor):</strong></p>
+                <ol>
+                    <li>Se envía un vector de características faciales (representación matemática) al servidor</li>
+                    <li>Un modelo de aprendizaje automático analiza el vector para detección de vida pasiva</li>
+                    <li>NO se transmiten ni almacenan imágenes faciales</li>
+                    <li>El vector se descarta después de la verificación</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Procesamiento y Almacenamiento de Datos</h2>
+            
+            <h3>Procesamiento en Dispositivo</h3>
+            <p>
+                <strong>TODOS</strong> los datos de TrueDepth se procesan íntegramente en su dispositivo en tiempo real. 
+                Una vez completada la verificación de vida, los datos biométricos crudos se descartan inmediatamente. 
+                La aplicación <strong>NUNCA</strong> almacena datos biométricos sin procesar.
+            </p>
+
+            <h3>Información Transmitida a Servidores UDLAP</h3>
+            <p>La aplicación transmite únicamente:</p>
+            <ul>
+                <li><strong>Resultado de verificación de vida</strong> (booleano: verificado sí/no)</li>
+                <li><strong>Vector de características faciales</strong> (representación matemática, NO imágenes)</li>
+                <li><strong>Marca de tiempo</strong> del intento de autenticación</li>
+                <li><strong>ID de usuario</strong> asociado al intento</li>
+            </ul>
+
+            <h3>Información Almacenada en Servidores</h3>
+            <p>Los servidores de UDLAP almacenan únicamente:</p>
+            <ul>
+                <li>Resultado de la autenticación (exitosa/fallida)</li>
+                <li>Marca de tiempo del intento</li>
+                <li>Identificador de usuario</li>
+                <li>Registro de auditoría de acceso al campus</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h3>Información que NUNCA se Almacena ni Comparte</h3>
+                <ul>
+                    <li>Mapas de profundidad facial o modelos 3D</li>
+                    <li>Datos crudos del sensor TrueDepth</li>
+                    <li>Imágenes o fotografías faciales</li>
+                    <li>Coordenadas de seguimiento ocular</li>
+                    <li>Datos de posición de cabeza sin procesar</li>
+                    <li>Plantillas biométricas reconstruibles</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Compartir con Terceros</h2>
+            <p>
+                <strong>NO</strong> se comparten datos de TrueDepth ni información biométrica con terceros. 
+                Todo el procesamiento biométrico ocurre localmente en su dispositivo o en servidores seguros 
+                de UDLAP. Solo resultados booleanos de verificación (verificado/no verificado) se registran 
+                en sistemas institucionales.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Otros Datos Personales Recopilados</h2>
+            <p>Además de la información relacionada con TrueDepth, eUDLAPx recopila:</p>
+            <ul>
+                <li><strong>Datos de autenticación:</strong> Credenciales institucionales (validadas mediante Microsoft MSAL)</li>
+                <li><strong>Datos de acceso:</strong> Registros de entrada y salida del campus, códigos QR escaneados, ubicación de puntos de acceso</li>
+                <li><strong>Datos de dispositivo:</strong> Identificador del dispositivo, modelo, versión de iOS, token de notificaciones push (Firebase FCM)</li>
+                <li><strong>Datos de perfil:</strong> Nombre, matrícula/ID institucional, rol (estudiante/empleado), fotografía de perfil institucional</li>
+            </ul>
+            <p>
+                Estos datos se utilizan exclusivamente para proporcionar funcionalidades de seguridad y acceso al campus.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Retención de Datos</h2>
+            <p>
+                Los resultados de verificación de vida y registros de acceso se conservan durante el tiempo necesario 
+                para cumplir con protocolos de seguridad y auditoría institucionales, en cumplimiento con la 
+                <strong>Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP)</strong>.
+            </p>
+            <p>
+                Los plazos de conservación no excederán lo necesario para el cumplimiento de las finalidades descritas. 
+                Una vez cumplidas, y cuando no exista disposición legal que establezca lo contrario, UDLAP procederá 
+                a la cancelación de sus datos personales.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Medidas de Seguridad</h2>
+            <p>
+                UDLAP implementa medidas de seguridad técnicas, físicas y administrativas para proteger sus datos personales:
+            </p>
+            <ul>
+                <li><strong>Encriptación:</strong> Todas las comunicaciones entre la aplicación y servidores utilizan HTTPS/TLS</li>
+                <li><strong>Almacenamiento seguro:</strong> Tokens de autenticación almacenados en Keychain de iOS</li>
+                <li><strong>Control de acceso:</strong> Acceso limitado a datos personales solo para personal autorizado</li>
+                <li><strong>Auditorías:</strong> Revisión periódica de medidas de seguridad y cumplimiento</li>
+                <li><strong>Secure Enclave:</strong> Datos biométricos procesados en enclave seguro del dispositivo</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Derechos ARCO (Acceso, Rectificación, Cancelación y Oposición)</h2>
+            <p>
+                Como titular de datos personales, usted tiene derecho a:
+            </p>
+            <ul>
+                <li><strong>Acceder</strong> a sus datos personales en posesión de UDLAP</li>
+                <li><strong>Rectificar</strong> datos inexactos o incompletos</li>
+                <li><strong>Cancelar</strong> sus datos cuando considere que no se requieren para finalidad alguna</li>
+                <li><strong>Oponerse</strong> al tratamiento de sus datos para fines específicos</li>
+            </ul>
+            <p>
+                Para ejercer sus derechos ARCO y conocer los procedimientos aplicables, consulte el 
+                <a href="https://www.udlap.mx/privacidad/" target="_blank">Aviso de Privacidad Institucional de UDLAP</a>, 
+                donde se detallan los mecanismos, requisitos y plazos para el ejercicio de estos derechos.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Revocación del Consentimiento</h2>
+            <p>
+                Puede revocar su consentimiento para el tratamiento de sus datos personales. Para conocer el 
+                procedimiento aplicable, consulte el <a href="https://www.udlap.mx/privacidad/" target="_blank">Aviso 
+                de Privacidad Institucional de UDLAP</a>.
+            </p>
+            <div class="info-box">
+                <p>
+                    <strong>Nota Importante:</strong> El uso de TrueDepth API es requerido para la funcionalidad de 
+                    seguridad de eUDLAPx. Si revoca su consentimiento para el procesamiento de datos biométricos, 
+                    no podrá utilizar la aplicación para acceso al campus y deberá utilizar métodos alternativos 
+                    de identificación proporcionados por la universidad.
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Actualizaciones de Información</h2>
+            <p>
+                Esta información puede ser actualizada periódicamente para reflejar cambios en las prácticas de 
+                manejo de datos de la aplicación eUDLAPx o en la legislación aplicable.
+            </p>
+            <p>
+                Las actualizaciones se publicarán en esta página. Cuando sean cambios sustanciales, se notificarán 
+                mediante la aplicación eUDLAPx. Recomendamos revisar periódicamente esta información.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Jurisdicción y Legislación Aplicable</h2>
+            <p>
+                El presente Aviso de Privacidad se rige por la legislación mexicana, específicamente:
+            </p>
+            <ul>
+                <li>Ley Federal de Protección de Datos Personales en Posesión de los Particulares</li>
+                <li>Reglamento de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares</li>
+                <li>Lineamientos del Aviso de Privacidad emitidos por el INAI</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>
+                <strong>eUDLAPx - Fundación Universidad de las Américas, Puebla</strong><br>
+                Información vigente desde diciembre de 2025
+            </p>
+            <p style="margin-top: 15px;">
+                <a href="https://www.udlap.mx/privacidad/" target="_blank">Ver Aviso de Privacidad Institucional</a> | 
+                <a href="https://www.udlap.mx" target="_blank">UDLAP</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
