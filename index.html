@@ -3,488 +3,242 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Información sobre cómo eUDLAPx recopila y protege datos personales - Universidad de las Américas Puebla" />
+  <meta name="description" content="Información de Privacidad de la aplicación eUDLAPx" />
   <title>Información de Privacidad - eUDLAPx</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
       line-height: 1.6;
-      color: #333;
       background-color: #f5f5f5;
+      color: #333;
     }
     .container {
       max-width: 900px;
       margin: 0 auto;
+      background: #fff;
       padding: 20px;
-      background-color: #fff;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     header {
-      background: linear-gradient(135deg, #e35205 0%, #154734 100%);
+      background: linear-gradient(135deg, #e35205, #154734);
       color: #fff;
-      padding: 40px 20px;
       text-align: center;
+      padding: 40px 20px;
       margin: -20px -20px 40px -20px;
     }
-    header h1 { font-size: 2.5em; margin-bottom: 10px; font-weight: 600; }
-    header p { font-size: 1.1em; opacity: 0.95; }
-    .section { margin-bottom: 40px; }
+    header h1 { font-size: 2.4em; }
+    header p { font-size: 1.1em; opacity: .95; }
     h2 {
       color: #e35205;
-      font-size: 1.8em;
+      border-bottom: 3px solid #154734;
       margin-bottom: 20px;
       padding-bottom: 10px;
-      border-bottom: 3px solid #154734;
     }
-    h3 { color: #154734; font-size: 1.3em; margin-top: 25px; margin-bottom: 15px; }
-    h4 { color: #154734; font-size: 1.1em; margin-top: 15px; margin-bottom: 10px; }
+    h3 { color: #154734; margin-top: 25px; }
     p { margin-bottom: 15px; text-align: justify; }
     ul, ol { margin-left: 20px; margin-bottom: 15px; }
     li { margin-bottom: 8px; }
     .highlight-box {
-      background-color: #fff5f0;
+      background: #fff5f0;
       border-left: 4px solid #e35205;
       padding: 20px;
       margin: 20px 0;
       border-radius: 4px;
     }
     .info-box {
-      background-color: #f0f7f4;
+      background: #f0f7f4;
       border-left: 4px solid #154734;
       padding: 20px;
       margin: 20px 0;
       border-radius: 4px;
     }
     .footer {
-      text-align: center;
-      padding: 30px 20px;
-      color: #666;
-      font-size: 0.9em;
       border-top: 1px solid #ddd;
-      margin-top: 50px;
+      margin-top: 40px;
+      padding: 20px;
+      text-align: center;
+      font-size: .9em;
+      color: #666;
     }
     a { color: #e35205; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    strong { color: #154734; }
     .last-updated {
       text-align: right;
+      font-size: .9em;
       color: #666;
-      font-size: 0.9em;
-      margin-bottom: 20px;
       font-style: italic;
-    }
-    @media (max-width: 768px) {
-      header h1 { font-size: 1.8em; }
-      h2 { font-size: 1.5em; }
-      .container { padding: 15px; }
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>eUDLAPx</h1>
-      <p>Información de Privacidad de la Aplicación</p>
-    </header>
+<div class="container">
+  <header>
+    <h1>eUDLAPx</h1>
+    <p>Información de Privacidad de la Aplicación</p>
+  </header>
 
-    <p class="last-updated">Última actualización: Diciembre 2025</p>
+  <p class="last-updated">Última actualización: Diciembre 2025</p>
 
-    <!-- INTRODUCCIÓN -->
-    <div class="section">
-      <h2>Introducción</h2>
+  <!-- INTRODUCCIÓN -->
+  <section>
+    <h2>Introducción</h2>
+    <p>
+      El presente documento informa de manera específica <strong>para qué</strong> la aplicación móvil
+      <strong>eUDLAPx</strong> recopila, utiliza y trata datos personales de sus usuarios, incluyendo
+      <strong>datos biométricos</strong> (detección de vida / <em>liveness</em>) para fines de autenticación,
+      seguridad y prevención de fraude.
+    </p>
+    <p>
+      El consentimiento para el tratamiento de datos biométricos es un <strong>requisito indispensable
+      para el uso integral de la aplicación eUDLAPx</strong>. En caso de no otorgarlo, la aplicación no podrá
+      utilizarse.
+    </p>
+    <p>
+      Lo anterior <strong>no restringe ni condiciona el acceso físico al campus</strong>, el cual puede
+      realizarse por otros mecanismos institucionales definidos por la UDLAP.
+    </p>
+    <p>
+      eUDLAPx es una aplicación desarrollada para la Fundación Universidad de las Américas, Puebla (UDLAP).
+      El tratamiento de datos personales se realiza conforme al
+      <a href="https://www.udlap.mx/privacidad/" target="_blank" rel="noopener noreferrer">
+        Aviso de Privacidad Institucional de la UDLAP
+      </a>
+      y la legislación mexicana aplicable.
+    </p>
+  </section>
+
+  <!-- FINALIDADES -->
+  <section>
+    <h2>Finalidades del Tratamiento</h2>
+
+    <h3>Finalidades primarias</h3>
+    <ul>
+      <li>Autenticación y verificación de identidad del usuario.</li>
+      <li>Prevención de fraude y suplantación de identidad.</li>
+      <li>Operación segura de la aplicación eUDLAPx.</li>
+      <li>Generación de registros de auditoría y seguridad.</li>
+      <li>Soporte técnico y mejora continua de la aplicación.</li>
+    </ul>
+
+    <h3>Finalidades secundarias</h3>
+    <p>
+      eUDLAPx <strong>no utiliza datos biométricos</strong> para fines de mercadotecnia, publicidad
+      o difusión. Cualquier uso distinto será informado previamente conforme al Aviso de Privacidad Institucional.
+    </p>
+  </section>
+
+  <!-- RESPONSABLE -->
+  <section>
+    <h2>Responsable del Tratamiento</h2>
+    <p>
+      <strong>Fundación Universidad de las Américas, Puebla (UDLAP)</strong><br />
+      Ex Hacienda Santa Catarina Mártir S/N, San Andrés Cholula, Puebla, C.P. 72810, México.
+    </p>
+  </section>
+
+  <!-- DATOS SENSIBLES -->
+  <section>
+    <h2>Datos Personales Sensibles y Consentimiento Expreso</h2>
+    <p>
+      El tratamiento de datos biométricos utilizados para detección de vida constituye
+      <strong>datos personales sensibles</strong> conforme a la LFPDPPP, por lo que requiere
+      <strong>consentimiento expreso</strong>.
+    </p>
+
+    <div class="highlight-box">
+      <h3>Obtención del consentimiento</h3>
+      <ol>
+        <li>Presentación de este aviso previo al uso de la aplicación.</li>
+        <li>Aceptación mediante acción afirmativa (casilla o botón).</li>
+        <li>Registro electrónico de la aceptación.</li>
+        <li>Sin aceptación, la aplicación no puede utilizarse.</li>
+      </ol>
       <p>
-        Este documento informa de manera específica <strong>para qué</strong> la aplicación móvil <strong>eUDLAPx</strong>
-        recopila, utiliza, almacena y/o transmite datos personales de sus usuarios, incluyendo el uso de tecnologías
-        biométricas (detección de vida / <em>liveness</em>) para autenticación y seguridad, cuando el usuario decide
-        habilitar la funcionalidad de <strong>acceso al campus dentro de la aplicación</strong>.
-      </p>
-      <p>
-        eUDLAPx es una aplicación desarrollada para la Fundación Universidad de las Américas, Puebla (UDLAP).
-        El tratamiento de datos personales se realiza en cumplimiento del
-        <a href="https://www.udlap.mx/privacidad/" target="_blank" rel="noopener noreferrer">Aviso de Privacidad Institucional de UDLAP</a>
-        y la legislación mexicana aplicable. Este documento complementa (no sustituye) dicho Aviso y describe
-        finalidades y tratamientos específicos de eUDLAPx.
-      </p>
-
-      <div class="highlight-box">
-        <h3>Aclaración sobre el uso de la app</h3>
-        <p>
-          Si usted <strong>no otorga</strong> el consentimiento expreso para el tratamiento de datos biométricos
-          (detección de vida / liveness), <strong>no podrá utilizar la funcionalidad de acceso al campus dentro de la aplicación eUDLAPx</strong>,
-          sin que ello limite otros mecanismos institucionales de acceso.
-        </p>
-      </div>
-    </div>
-
-    <!-- FINALIDADES -->
-    <div class="section">
-      <h2>Finalidades del Tratamiento en eUDLAPx</h2>
-      <p>En el contexto de eUDLAPx, sus datos personales podrán tratarse para las siguientes finalidades:</p>
-
-      <h3>Finalidades primarias (necesarias para el servicio)</h3>
-      <ul>
-        <li><strong>Autenticación de identidad</strong> del usuario dentro de la aplicación.</li>
-        <li><strong>Habilitar y operar</strong> la funcionalidad de <strong>acceso al campus dentro de la aplicación</strong> cuando el usuario la activa.</li>
-        <li><strong>Prevención de fraude y suplantación</strong> de identidad mediante detección de vida (liveness).</li>
-        <li><strong>Seguridad, auditoría y trazabilidad</strong>: generación de bitácoras, registros y evidencias técnicas.</li>
-        <li><strong>Soporte técnico</strong>, atención a incidentes y mejora de estabilidad/seguridad de la app.</li>
-      </ul>
-
-      <h3>Finalidades secundarias</h3>
-      <p>
-        eUDLAPx <strong>no utiliza</strong> los datos biométricos para finalidades secundarias (por ejemplo,
-        mercadotecnia o publicidad). En caso de que eUDLAPx llegara a utilizar datos personales (no biométricos)
-        para finalidades secundarias, se informará y recabará, cuando aplique, el consentimiento correspondiente,
-        conforme al Aviso de Privacidad Institucional.
-      </p>
-
-      <div class="info-box">
-        <h3>Compatibilidad con el Aviso de Privacidad Institucional</h3>
-        <p>
-          El Aviso de Privacidad Institucional de UDLAP contempla transferencias/remisiones como:
-          (i) prestadores de servicios contratados para tratamiento de datos; (ii) otras instituciones educativas
-          para proyectos académicos, culturales o deportivos; y (iii) uso de nombre/domicilio/teléfono/correo
-          para envío de información sobre servicios y eventos.
-        </p>
-        <p>
-          En eUDLAPx, las finalidades descritas en este documento se enfocan en autenticación y seguridad.
-          Si alguna actividad de eUDLAPx implicara una finalidad adicional no contemplada aquí o no alineada con el Aviso
-          Institucional, <strong>este documento deberá actualizarse</strong> antes de su implementación.
-        </p>
-      </div>
-    </div>
-
-    <!-- RESPONSABLE -->
-    <div class="section">
-      <h2>Responsable del Tratamiento de Datos</h2>
-      <p>
-        <strong>Fundación Universidad de las Américas, Puebla (UDLAP)</strong><br />
-        Domicilio: Ex Hacienda Santa Catarina Mártir S/N, San Andrés Cholula, Puebla, C.P. 72810, México
-      </p>
-      <p>
-        Para consultas sobre el manejo de datos personales por parte de UDLAP, consulte el
-        <a href="https://www.udlap.mx/privacidad/" target="_blank" rel="noopener noreferrer">Aviso de Privacidad Institucional</a>.
-      </p>
-    </div>
-
-    <!-- SENSIBLES -->
-    <div class="section">
-      <h2>Datos Personales Sensibles y Consentimiento Expreso</h2>
-      <p>
-        La detección de vida (<em>liveness</em>) implica el tratamiento de <strong>datos biométricos</strong>, los cuales,
-        en términos de la LFPDPPP, se consideran <strong>datos personales sensibles</strong>. Por ello, su tratamiento
-        requiere que el consentimiento sea <strong>expreso</strong>.
-      </p>
-
-      <div class="highlight-box">
-        <h3>¿Cómo se obtiene el consentimiento expreso?</h3>
-        <ol>
-          <li>
-            Antes de activar “Acceso al campus” dentro de la app, eUDLAPx muestra este documento y un aviso específico de biométricos (liveness),
-            indicando datos, finalidades y alcance.
-          </li>
-          <li>
-            El usuario otorga su consentimiento mediante una <strong>acción afirmativa</strong>
-            (por ejemplo: marcar una casilla “Acepto el tratamiento de datos biométricos para liveness” y pulsar “Continuar”).
-          </li>
-          <li>
-            eUDLAPx registra la aceptación (fecha/hora, versión del aviso y usuario) como evidencia de consentimiento.
-          </li>
-          <li>
-            Sin esta aceptación, eUDLAPx <strong>no habilita</strong> el liveness ni la funcionalidad de acceso al campus dentro de la aplicación.
-          </li>
-        </ol>
-        <p>
-          Adicionalmente, en iOS/Android se solicitarán permisos del sistema (p. ej., cámara). Estos permisos
-          <strong>no sustituyen</strong> el consentimiento expreso; son un requisito técnico adicional.
-        </p>
-      </div>
-    </div>
-
-    <!-- iOS -->
-    <div class="section">
-      <h2>Tecnologías Biométricas en iOS: TrueDepth API</h2>
-
-      <div class="highlight-box">
-        <h3>¿Qué es TrueDepth API?</h3>
-        <p>
-          En dispositivos iOS, eUDLAPx utiliza la tecnología <strong>TrueDepth API</strong> de Apple para realizar
-          detección de vida (liveness). Esta tecnología verifica que una persona física real está presente durante el
-          proceso de autenticación.
-        </p>
-      </div>
-
-      <h3>Datos Procesados con TrueDepth</h3>
-      <p>Durante el proceso de liveness, la aplicación procesa:</p>
-      <ul>
-        <li>Patrones de movimiento facial</li>
-        <li>Parpadeos</li>
-        <li>Mediciones de distancia</li>
-        <li>Orientación de cabeza (Yaw, Pitch, Roll)</li>
-      </ul>
-
-      <h3>Finalidad</h3>
-      <p>Los datos biométricos se utilizan exclusivamente para:</p>
-      <ul>
-        <li>Detectar vida (liveness)</li>
-        <li>Prevenir suplantación de identidad</li>
-        <li>Habilitar y proteger la funcionalidad de <strong>acceso al campus dentro de la aplicación</strong></li>
-      </ul>
-
-      <h3>Consentimiento (expreso)</h3>
-      <p>
-        El uso de TrueDepth requiere <strong>consentimiento expreso</strong> previo a su utilización.
-        Este consentimiento se obtiene dentro de la app mediante una acción afirmativa (por ejemplo, casilla de aceptación),
-        antes de solicitar el permiso de cámara/Face ID del sistema.
-        Si usted no lo otorga, <strong>no podrá utilizar la funcionalidad de acceso al campus dentro de eUDLAPx</strong>.
-      </p>
-
-      <div class="info-box">
-        <h3>Proceso de Detección de Vida</h3>
-        <p><strong>Liveness Activo (en dispositivo):</strong></p>
-        <ol>
-          <li>Procesamiento completamente local</li>
-          <li>Verificación en tiempo real</li>
-          <li>Resultado booleano</li>
-          <li>Datos crudos descartados inmediatamente</li>
-        </ol>
-
-        <p><strong>Liveness Pasivo (en servidor UDLAP):</strong></p>
-        <ol>
-          <li>Envío de vector matemático no reconstructible</li>
-          <li>Análisis por modelo de ML</li>
-          <li>No se envían imágenes</li>
-          <li>Vector eliminado tras la verificación</li>
-        </ol>
-      </div>
-    </div>
-
-    <!-- ANDROID -->
-    <div class="section">
-      <h2>Tecnologías Biométricas en Android: Google ML Kit</h2>
-
-      <div class="highlight-box">
-        <h3>¿Qué es Google ML Kit?</h3>
-        <p>
-          En dispositivos Android, eUDLAPx utiliza <strong>ML Kit Vision</strong> de Google para detección de vida (liveness).
-          Esta tecnología emplea algoritmos de visión computacional para detectar presencia humana y descartar intentos de fraude.
-        </p>
-      </div>
-
-      <h3>Datos Procesados con ML Kit</h3>
-      <p>ML Kit procesa temporalmente, sin almacenar:</p>
-      <ul>
-        <li>Movimientos faciales básicos</li>
-        <li>Parpadeos y presencia de rostro</li>
-        <li>Orientación general del rostro</li>
-        <li>Características matemáticas generadas por ML Kit</li>
-      </ul>
-      <p><strong>No se almacenan imágenes o videos.</strong></p>
-
-      <h3>Finalidad</h3>
-      <ul>
-        <li>Verificar presencia real (liveness)</li>
-        <li>Evitar suplantación con fotos o videos</li>
-        <li>Habilitar y proteger la funcionalidad de <strong>acceso al campus dentro de la aplicación</strong></li>
-      </ul>
-
-      <h3>Consentimiento (expreso) y permisos</h3>
-      <p>
-        Para usar liveness en Android se requiere: (i) <strong>consentimiento expreso</strong> dentro de la app antes de su activación,
-        y (ii) permiso de cámara del sistema operativo. Sin el consentimiento expreso y/o sin el permiso de cámara,
-        <strong>no podrá utilizar la funcionalidad de acceso al campus dentro de eUDLAPx</strong>.
-      </p>
-
-      <div class="info-box">
-        <h3>Proceso de Liveness con ML Kit</h3>
-        <p><strong>Liveness en dispositivo (Android):</strong></p>
-        <ol>
-          <li>ML Kit analiza imágenes en memoria temporal</li>
-          <li>No se capturan ni almacenan fotografías</li>
-          <li>Se produce un resultado booleano</li>
-          <li>Los datos se descartan en milisegundos</li>
-        </ol>
-
-        <p><strong>Liveness Pasivo (en servidor UDLAP):</strong></p>
-        <ol>
-          <li>Generación de vector matemático no reconstructible</li>
-          <li>Envío temporal al servidor</li>
-          <li>Análisis por modelo de ML</li>
-          <li>Eliminación tras la verificación</li>
-        </ol>
-      </div>
-    </div>
-
-    <!-- PROCESAMIENTO -->
-    <div class="section">
-      <h2>Procesamiento y Almacenamiento de Datos</h2>
-
-      <h3>Procesamiento en Dispositivo (iOS y Android)</h3>
-      <p>
-        Los datos biométricos utilizados para liveness (TrueDepth en iOS y ML Kit en Android) se procesan principalmente en su dispositivo.
-        Ninguna imagen facial, mapa de profundidad ni video se almacena como parte del funcionamiento ordinario de liveness.
-      </p>
-
-      <h3>Información Transmitida a Servidores UDLAP</h3>
-      <p>La aplicación transmite únicamente lo necesario para operar la autenticación y auditoría:</p>
-      <ul>
-        <li>Resultado booleano de verificación de vida</li>
-        <li>Vector matemático no reconstructible (cuando aplique)</li>
-        <li>Marca de tiempo</li>
-        <li>ID de usuario</li>
-      </ul>
-
-      <h3>Información Almacenada</h3>
-      <ul>
-        <li>Resultado de autenticación</li>
-        <li>Marca de tiempo</li>
-        <li>ID de usuario</li>
-        <li>Registros de auditoría</li>
-      </ul>
-
-      <div class="highlight-box">
-        <h3>Información que NUNCA se Almacena ni Comparte</h3>
-        <ul>
-          <li>Mapas de profundidad o modelos 3D</li>
-          <li>Datos crudos del sensor TrueDepth</li>
-          <li>Imágenes o fotografías faciales</li>
-          <li>Videos capturados por la cámara</li>
-          <li>Plantillas biométricas reconstruibles</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- TERCEROS -->
-    <div class="section">
-      <h2>Compartir con Terceros, Transferencias y Remisiones</h2>
-      <p>
-        <strong>Datos biométricos (liveness):</strong> eUDLAPx <strong>no transfiere ni remite</strong> datos biométricos a terceros.
-        El tratamiento biométrico para detección de vida (liveness) se realiza exclusivamente en el dispositivo del usuario y/o
-        en servidores institucionales de la UDLAP, bajo su control directo.
-      </p>
-      <p>
-        Ningún proveedor externo, encargado o tercero tiene acceso a datos biométricos, imágenes, videos, mapas de profundidad ni
-        vectores biométricos derivados.
-      </p>
-
-      <p>
-        Para otros datos personales <strong>no biométricos</strong> (por ejemplo, infraestructura tecnológica, autenticación o soporte),
-        la UDLAP podrá utilizar prestadores de servicios que actúan como <strong>encargados</strong>, conforme al
-        Aviso de Privacidad Institucional, bajo obligaciones de confidencialidad y seguridad, sin que ello implique transferencia
-        o remisión de datos biométricos.
+        Los permisos del sistema operativo (cámara) son requisitos técnicos adicionales
+        y <strong>no sustituyen</strong> el consentimiento legal expreso.
       </p>
     </div>
+  </section>
 
-    <!-- OTROS DATOS -->
-    <div class="section">
-      <h2>Otros Datos Personales Recopilados</h2>
-      <p>Además de los datos biométricos descritos (cuando se habilita liveness), eUDLAPx puede tratar:</p>
-      <ul>
-        <li><strong>Datos de autenticación:</strong> MSAL (Microsoft) para inicio de sesión</li>
-        <li><strong>Registros de acceso al campus dentro de la app</strong> (resultado, fecha/hora, identificadores)</li>
-        <li><strong>Datos de dispositivo:</strong> modelo, sistema operativo, token FCM</li>
-        <li><strong>Datos de perfil:</strong> nombre, ID, rol</li>
-      </ul>
-    </div>
+  <!-- BIOMETRÍA -->
+  <section>
+    <h2>Tratamiento de Datos Biométricos</h2>
+    <p>
+      eUDLAPx utiliza tecnologías de detección de vida en dispositivos iOS (TrueDepth API)
+      y Android (Google ML Kit).
+    </p>
+    <ul>
+      <li>El procesamiento se realiza principalmente en el dispositivo.</li>
+      <li>No se almacenan imágenes, videos ni plantillas biométricas.</li>
+      <li>Los vectores matemáticos no son reconstructibles y se eliminan tras su uso.</li>
+    </ul>
+  </section>
 
-    <!-- RETENCIÓN -->
-    <div class="section">
-      <h2>Retención de Datos</h2>
+  <!-- TERCEROS -->
+  <section>
+    <h2>Transferencias y Remisiones</h2>
+    <p>
+      eUDLAPx <strong>no transfiere ni remite datos biométricos a terceros</strong>.
+      El tratamiento biométrico se realiza exclusivamente en el dispositivo del usuario
+      y/o en servidores institucionales bajo control de la UDLAP.
+    </p>
+    <p>
+      Para otros datos personales no biométricos, la UDLAP podrá utilizar proveedores
+      que actúan como encargados conforme al Aviso de Privacidad Institucional.
+    </p>
+  </section>
 
-      <div class="highlight-box">
-        <h3>Datos biométricos para liveness</h3>
-        <p>
-          <strong>Retención:</strong> no se almacenan imágenes/biometría cruda; el procesamiento es temporal.
-          Los vectores matemáticos (cuando aplique) se eliminan tras la verificación (segundos).
-        </p>
-      </div>
+  <!-- RETENCIÓN -->
+  <section>
+    <h2>Conservación de Datos</h2>
+    <p>
+      Los datos biométricos no se almacenan. Los registros de autenticación y auditoría
+      se conservan conforme a los plazos institucionales y legales aplicables.
+    </p>
+  </section>
 
-      <h3>Otros Datos de Autenticación</h3>
-      <p>
-        <strong>Resultados booleanos y bitácoras:</strong> 2 años desde el último acceso (o el plazo que resulte aplicable por normativa interna y/o legal).
-      </p>
-    </div>
+  <!-- DERECHOS -->
+  <section>
+    <h2>Derechos ARCO</h2>
+    <p>
+      El titular puede ejercer sus derechos de acceso, rectificación, cancelación u oposición
+      conforme al Aviso de Privacidad Institucional.
+    </p>
+  </section>
 
-    <!-- SEGURIDAD -->
-    <div class="section">
-      <h2>Medidas de Seguridad</h2>
-      <ul>
-        <li><strong>Cifrado TLS/HTTPS</strong></li>
-        <li><strong>Keychain (iOS) y Encrypted Shared Preferences (Android)</strong></li>
-        <li><strong>Secure Enclave</strong> en dispositivos compatibles</li>
-        <li>Auditorías regulares y controles de acceso</li>
-      </ul>
-    </div>
+  <!-- REVOCACIÓN -->
+  <section>
+    <h2>Revocación del Consentimiento</h2>
+    <p>
+      El consentimiento puede revocarse en cualquier momento. La revocación implica
+      la imposibilidad de utilizar la aplicación eUDLAPx, sin afectar el acceso físico
+      al campus por otros medios institucionales.
+    </p>
+  </section>
 
-    <!-- ARCO -->
-    <div class="section">
-      <h2>Derechos ARCO</h2>
-      <p>
-        Acceso, rectificación, cancelación u oposición pueden solicitarse siguiendo el Aviso de Privacidad Institucional.
-      </p>
-    </div>
+  <!-- JURISDICCIÓN -->
+  <section>
+    <h2>Legislación Aplicable</h2>
+    <ul>
+      <li>Ley Federal de Protección de Datos Personales en Posesión de los Particulares</li>
+      <li>Reglamento de la Ley</li>
+      <li>Lineamientos del INAI</li>
+    </ul>
+  </section>
 
-    <!-- REVOCACIÓN -->
-    <div class="section">
-      <h2>Revocación del Consentimiento</h2>
-      <p>
-        Usted puede revocar su consentimiento para el tratamiento de datos biométricos deshabilitando la funcionalidad de acceso al campus dentro de la app
-        (cuando la app lo permita) y/o retirando permisos del sistema. La revocación puede implicar que
-        <strong>no pueda usar la funcionalidad de acceso al campus dentro de eUDLAPx</strong>.
-      </p>
-
-      <div class="info-box">
-        <h4>En iOS</h4>
-        <ol>
-          <li>Configuración &gt; eUDLAPx &gt; Cámara</li>
-          <li>Desactivar acceso a cámara (TrueDepth)</li>
-        </ol>
-      </div>
-
-      <div class="info-box">
-        <h4>En Android</h4>
-        <ol>
-          <li>Ajustes &gt; Aplicaciones &gt; eUDLAPx</li>
-          <li>Permisos &gt; Cámara &gt; Denegar</li>
-        </ol>
-      </div>
-
-      <div class="info-box">
-        <h4>Desinstalar la Aplicación</h4>
-        <p>Elimina permisos y datos locales automáticamente.</p>
-      </div>
-    </div>
-
-    <!-- ACTUALIZACIONES -->
-    <div class="section">
-      <h2>Actualizaciones de Información</h2>
-      <p>
-        Esta información puede actualizarse periódicamente. Los cambios serán notificados en la aplicación y/o
-        publicados en los medios institucionales correspondientes.
-      </p>
-    </div>
-
-    <!-- JURISDICCIÓN -->
-    <div class="section">
-      <h2>Jurisdicción y Legislación Aplicable</h2>
-      <ul>
-        <li>Ley Federal de Protección de Datos Personales en Posesión de los Particulares</li>
-        <li>Reglamento de la Ley</li>
-        <li>Lineamientos del INAI</li>
-      </ul>
-    </div>
-
-    <div class="footer">
-      <p>
-        <strong>eUDLAPx - Fundación Universidad de las Américas, Puebla</strong><br />
-        Información vigente desde diciembre de 2025
-      </p>
-      <p style="margin-top: 15px;">
-        <a href="https://www.udlap.mx/privacidad/" target="_blank" rel="noopener noreferrer">Ver Aviso de Privacidad Institucional</a> |
-        <a href="https://www.udlap.mx" target="_blank" rel="noopener noreferrer">UDLAP</a>
-      </p>
-    </div>
+  <div class="footer">
+    <p>
+      <strong>eUDLAPx – Fundación Universidad de las Américas, Puebla</strong><br />
+      Información vigente desde diciembre de 2025
+    </p>
+    <p>
+      <a href="https://www.udlap.mx/privacidad/" target="_blank" rel="noopener noreferrer">
+        Aviso de Privacidad Institucional
+      </a>
+    </p>
   </div>
+</div>
 </body>
 </html>
